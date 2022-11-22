@@ -2,6 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import desktop_goodtoseeyou_mp4 from '/public/desktop-goodtoseeyou.mp4';
+import idle_mp4 from '/public/videos/idle.mp4';
+
+const isIdleVideo = false
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +20,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
+        <video playsInline autoPlay src={isIdleVideo ? desktop_goodtoseeyou_mp4 :idle_mp4 } />
         <p className={styles.description}>
           Get started by editing{' '} Hello Next.js 13
           <code className={styles.code}>pages/index.tsx</code>
